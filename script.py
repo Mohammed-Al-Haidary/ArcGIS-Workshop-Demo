@@ -73,6 +73,7 @@ def find_closest(desired_num_of_facilities):
         return medical_facilities[:desired_num_of_facilities]
     else:
         print('There does not exist the requested number of medical facilities.')
+        return None
 
 
 '''
@@ -99,4 +100,5 @@ if __name__ == '__main__':
     setup()
     read_data()
     resulted_facilities = find_closest(5)
-    save_results(resulted_facilities)
+    if resulted_facilities is not None:
+        save_results(resulted_facilities)
